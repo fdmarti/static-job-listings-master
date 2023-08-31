@@ -1,0 +1,30 @@
+.option {
+	background-color: var(--bgCyan);
+	color: var(--darkCyan);
+	border-radius: 5px;
+
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.text-option {
+	font-weight: 700;
+	padding: 6px;
+}
+
+.logo-block {
+	padding: 5px;
+	background-color: var(--darkCyan);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.logo-block:hover {
+	cursor: pointer;
+	background-color: var(--veryDarkCyanGrayish);
+}
+
+.logo-block img {
+	display: flex;
+}

@@ -1,0 +1,6 @@
+.header {
+	background: url('/images/bg-header-desktop.svg') center/cover no-repeat
+		var(--darkCyan);
+	width: 100%;
+	height: 180px;
+}

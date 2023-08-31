@@ -1,0 +1,28 @@
+:root {
+	--darkCyan: #5ca3a3;
+
+	--bgCyan: hsl(180, 52%, 96%);
+	--filterCyan: hsl(180, 31%, 95%);
+	--darkGrayishCyan: hsl(180, 8%, 52%);
+	--veryDarkCyanGrayish: hsl(180, 14%, 20%);
+	--white: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'League Spartan', sans-serif;
+}
+
+body {
+	height: 100vh;
+	background-color: var(--bgCyan);
+}
+
+#app {
+	position: relative;
+}
+
+img {
+	width: 100%;
+}

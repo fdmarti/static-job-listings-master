@@ -1,0 +1,13 @@
+.bullet {
+	padding: 9px;
+	background-color: var(--bgCyan);
+	color: var(--darkCyan);
+	font-weight: 700;
+	border-radius: 5px;
+}
+
+.bullet:hover {
+	cursor: pointer;
+	background-color: var(--darkCyan);
+	color: var(--white);
+}
