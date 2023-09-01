@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import './Spinner.css';
+import './SpinnerComponent.css';
 </script>
 <template>
 	<div class="spinner"></div>

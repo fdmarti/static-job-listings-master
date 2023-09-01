@@ -1,8 +1,8 @@
 <script setup lang="ts">
-	import './Badge.css';
-	import Bullet from '../Bullet/Bullet.vue';
+import './BadgeComponent.css';
+import BulletComponent from '../BulletComponent/BulletComponent.vue';
 
-	const { job } = defineProps(['job']);
+const { job } = defineProps(['job']);
 </script>
 <template>
 	<div class="badge">
@@ -27,9 +27,15 @@
 			</section>
 		</section>
 		<section class="languages">
-			<Bullet
-				v-for="stack in [job.role, job.level, ...job.languages, ...job.tools]"
+			<BulletComponent
+				v-for="(stack, index) in [
+					job.role,
+					job.level,
+					...job.languages,
+					...job.tools,
+				]"
 				:stack="stack"
+				:key="index"
 			/>
 		</section>
 	</div>

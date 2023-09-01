@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import './Header.css';
+import './HeaderComponent.css';
 </script>
 <template>
 	<div class="header"></div>

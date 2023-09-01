@@ -21,7 +21,7 @@ export const useJobsStore = defineStore('Jobs', {
 		jobs: [],
 		filteredJobs: [],
 		optionsSelected: [],
-		isLoading: false,
+		isLoading: false
 	}),
 
 	actions: {
@@ -34,8 +34,13 @@ export const useJobsStore = defineStore('Jobs', {
 		},
 
 		filterJobs(job: string) {
-			const isSeleceted = this.optionsSelected.some((el) => el === job);
-			if (!isSeleceted) this.optionsSelected.push(job);
+			const isSeleceted = this.optionsSelected.some(
+				(element) => element === job
+			);
+			if (!isSeleceted) {
+				this.optionsSelected.push(job);
+			}
+
 			this.refreshList();
 		},
 
@@ -46,19 +51,23 @@ export const useJobsStore = defineStore('Jobs', {
 		},
 
 		refreshList() {
-			this.filteredJobs = this.jobs.filter((el: JobState) => {
-				const languages = el.languages;
-				const tools = el.tools;
-				const stack = [el.level, ...languages, ...tools, el.role];
+			this.filteredJobs = this.jobs.filter((element: JobState) => {
+				const languages = element.languages;
+				const tools = element.tools;
+				const stack = [element.level, ...languages, ...tools, element.role];
 
-				let i = 0;
+				let flag = 0;
 
-				this.optionsSelected.forEach((element) => {
-					if (stack.includes(element)) i++;
+				this.optionsSelected.forEach((elementStack) => {
+					if (stack.includes(elementStack)) {
+						flag++;
+					}
 				});
 
-				if (i === this.optionsSelected.length) return el;
+				if (flag === this.optionsSelected.length) {
+					return element;
+				}
 			});
-		},
-	},
+		}
+	}
 });

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-	import './FilterBullet.css';
-	import { useJobsStore } from '../../store/jobs';
+import './FilterBulletComponent.css';
+import { useJobsStore } from '../../store/jobs';
 
-	const { option } = defineProps(['option']);
-	const useJobs = useJobsStore();
-	const { deleteOptionFilter } = useJobs;
+const { option } = defineProps(['option']);
+const useJobs = useJobsStore();
+const { deleteOptionFilter } = useJobs;
 </script>
 <template>
 	<div class="option">
